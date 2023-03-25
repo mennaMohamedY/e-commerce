@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp"
+        android:src="@drawable/kiko"
+        android:scaleType="centerCrop"
+        android:id="@+id/single_item"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/single_item"
+        app:layout_constraintStart_toStartOf="@id/single_item"
+        app:layout_constraintEnd_toEndOf="@id/single_item"
+        android:textAlignment="center"
+        android:text="Women's fashion"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:id="@+id/category_nametxt"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

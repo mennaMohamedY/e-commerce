@@ -3,7 +3,7 @@
     <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -24,7 +24,12 @@
         <item name="cornerSize">18%</item>
 
     </style>
+    <style name="roundedImageView2">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">18%</item>
+        <item name="cornerSizeTopRight">18%</item>
 
+    </style>
     <style name="noActionBAr" parent="Theme.MyApplication">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -47,5 +52,15 @@
     <style name="noActionBAr.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="noActionBAr.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="menu_text_style" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Menu">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
 
 </resources>

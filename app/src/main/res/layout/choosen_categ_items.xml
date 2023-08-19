@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_colored_borders"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:id="@+id/container_categ">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="167dp"
+                android:layout_height="100dp"
+                app:shapeAppearanceOverlay="@style/roundedImageView2"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/hoimg"
+                tools:src="@drawable/nikefw1"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="@id/container_categ"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toTopOf="@id/container_categ"
+                android:layout_margin="16dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_baseline_favorite_border_24"
+                    android:id="@+id/favourite_InSubCategories" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/hoimg"
+                android:id="@+id/text_container">
+
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="26dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp"
+                    tools:text="Nike air Jordon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="70dp"
+                    android:layout_marginLeft="12dp"
+                    tools:text="Nike air Jordon flexible for running and"
+                    android:id="@+id/item_description"
+                    android:textSize="12sp"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    tools:text="EGP 1,200"
+                    android:id="@+id/item_price"
+                    android:textSize="12sp"
+                    android:textColor="@color/blue" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/text_container"
+                app:layout_constraintStart_toStartOf="@id/container_categ"
+                android:layout_marginLeft="9dp"
+                android:layout_margin="12dp"
+                tools:text="Review (4.6)"
+                android:id="@+id/item_rate"
+                android:textSize="12sp"
+                android:textColor="@color/blue"
+                android:drawableEnd="@drawable/ic_baseline_star_rate_24" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addBtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintEnd_toEndOf="@id/container_categ"
+                app:layout_constraintTop_toBottomOf="@id/text_container"
+                android:layout_marginRight="19dp"
+                android:layout_marginBottom="12dp"
+                app:backgroundTint="@color/blue"
+                android:background="@drawable/circle"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="22dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="9dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            app:strokeColor="#0362C1"
+            app:strokeWidth="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/detailed_fashion_imgs"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tshirt_m" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/detailed_fashion_imgs"
+            app:layout_constraintEnd_toEndOf="@id/detailed_fashion_imgs"
+            app:layout_constraintTop_toBottomOf="@id/detailed_fashion_imgs"
+            tools:text="T-shirts"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:textColor="@color/blue"
+            android:id="@+id/detailed_fashion_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

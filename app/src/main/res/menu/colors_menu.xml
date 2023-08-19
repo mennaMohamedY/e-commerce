@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/black" android:icon="@drawable/circle_black" android:title="&#x2713;"/>
+    <item android:id="@+id/red" android:icon="@drawable/circle_burnt_red" android:title="&#x2713;"/>
+    <item android:id="@+id/blue" android:icon="@drawable/circle_blue" android:title="&#x2713;"/>
+    <item android:id="@+id/green" android:icon="@drawable/circle_green" android:title="&#x2713;"  />
+    <item android:id="@+id/orange" android:icon="@drawable/circle_orange" android:title="&#x2713;"  />
+</menu>

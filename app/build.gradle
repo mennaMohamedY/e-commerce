@@ -71,12 +71,10 @@ dependencies {
 
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
-
-
     implementation("androidx.room:room-runtime:2.5.1")
 
     // To use Kotlin annotation processing tool (kapt)
-    //kapt("androidx.room:room-compiler:2.5.1")
+    kapt("androidx.room:room-compiler:2.5.1")
 
     //implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     //implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
@@ -86,13 +84,5 @@ dependencies {
     // Declare the dependency for the Cloud Firestore library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-firestore-ktx")
-
-
-
-
-
-
-
-
 
 }

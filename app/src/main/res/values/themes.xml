@@ -26,8 +26,8 @@
     </style>
     <style name="roundedImageView2">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSizeTopLeft">18%</item>
-        <item name="cornerSizeTopRight">18%</item>
+        <item name="cornerSizeTopLeft">32dp</item>
+        <item name="cornerSizeTopRight">32dp</item>
 
     </style>
     <style name="noActionBAr" parent="Theme.MyApplication">

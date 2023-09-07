@@ -132,15 +132,22 @@ class CartActivity : AppCompatActivity() {
     fun getFavouritData(){
         GlobalScope.launch(Dispatchers.IO) {
             FavouritsDAta= RoomClass.getInstance(this@CartActivity).FavouritsDao().showAllFromFavourits()
+
+            courtAdapter.UpdateData(FavouritsDAta)
+
+            /*
             runOnUiThread {
                 // Stuff that updates the UI
                 courtAdapter.UpdateData(FavouritsDAta)
             }
+
+             */
         }}
 
     fun deletCertainFavItem(poition:Int,Fav:FavouriteItems) {
         GlobalScope.launch(Dispatchers.IO) {
             RoomClass.getInstance(this@CartActivity).FavouritsDao().deleteItemFromFav(Fav)
+
 
             runOnUiThread {
                 // Stuff that updates the UI
@@ -149,6 +156,8 @@ class CartActivity : AppCompatActivity() {
                 getAllProcies()
 
             }
+
+
         }
     }
 
@@ -156,19 +165,30 @@ class CartActivity : AppCompatActivity() {
         GlobalScope.launch(Dispatchers.IO){
             //Prices=RoomClass.getInstance(this@CartActivity).FavouritsDao().getAllPrices()
             Prices=RoomClass.getInstance(this@CartActivity).FavouritsDao().getAllPrices()
+            /*
+            var fv = calAllPricess(Prices!!)
+            TotalPrice.text="${fv}"
+
+             */
+
 
             runOnUiThread {
                 // Stuff that updates the UI
                 var fv = calAllPricess(Prices!!)
                 TotalPrice.text="${fv}"
             }
+
+
         }
     }
     fun calAllPricess(prices:List<Int>):Int{
         count_Total=0
-        for (i in 0..prices.size-1){
-            count_Total = count_Total?.plus(prices.get(i))
+        if(prices.size>=1){
+            for (i in 0..prices.size-1){
+                count_Total = count_Total?.plus(prices.get(i))
+            }
         }
+
         return count_Total!!
     }
         //return FavouritsDAta

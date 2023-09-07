@@ -55,8 +55,8 @@ class CartAdapter(var dat_Item2:List<FavouriteItems?>?):Adapter<CartAdapter.MyCa
         //val ig ="https://res.cloudinary.com/dwp0imlbj/image/upload/v1680747343/Route-Academy-categories/1681511179514.png"
         //Glide.with(holder.itemView).load(ig).into(holder.imgg!!)
        //holder.color?.setBackgroundColor(currentItem!!.prod_color!!)
-        holder.color?.setImageResource(currentItem?.prod_color!!)
-        holder.colorName_size?.text=currentItem?.prod_colorName
+        holder.color?.setImageResource(currentItem?.prod_color?:R.color.transparent)
+        holder.colorName_size?.text=currentItem?.prod_colorName?:"no color was chosen"
        /*
         holder.constrain_court_col?.background?.setColorFilter(
             holder.constrain_court_col?.context!!.getColor(R.color.pink),PorterDuff.Mode.SRC_ATOP
